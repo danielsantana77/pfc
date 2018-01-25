@@ -33,10 +33,10 @@
           
           <li class="dropdown navbar-brand"><a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color: white; text-decoration: none;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
             <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
-            <form class="form-horizontal"  method="post" accept-charset="UTF-8">
-              <input id="sp_uname" class="form-control login" type="text" name="sp_uname" placeholder="Usuario.." />
-              <input id="sp_pass" class="form-control login" type="password" name="sp_pass" placeholder="Senha.."/>
-              <input class="btn btn-primary" type="submit" name="submit" value="login" />
+            <form class="form-horizontal" accept-charset="UTF-8" method="POST" action="loginAdmin.php">
+              <input id="email" class="form-control login" type="text" name="email" placeholder="Usuario.." />
+              <input id="senha" class="form-control login" type="password" name="senha" placeholder="Senha.."/>
+              <input class="btn btn-primary" type="submit" id="enviar" name="enviar" value="login" />
             </form>
             </div>
           </li>
