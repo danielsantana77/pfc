@@ -4,6 +4,8 @@
   <head>
 
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -30,6 +32,25 @@
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
         <a class="navbar-brand" href="http://www.ecompjr.com.br/">EComp Jr.</a>
+          
+        <!-- Login -->        
+        <li class="dropdown navbar-brand"><a class="dropdown-toggle" href="#" data-toggle="dropdown" style="color: white; text-decoration: none;"><span class="glyphicon glyphicon-log-in"></span> Login</a>
+          <div class="dropdown-menu" style="padding: 15px; padding-bottom: 10px;">
+            <form class="form-horizontal" action="routes/routes.php" method="POST">
+              <input id="login" class="form-control login" type="text" name="login" placeholder="Usuario.." />
+              <input id="senha" class="form-control login" type="password" name="senha" placeholder="Senha.."/>
+              <input type="submit" name="loginAttempt"/>
+            </form>
+          </div>
+        </li>
+
+          <?php
+            if(isset($_GET["valid"]) && $_GET["valid"] == "false") {
+              echo "<h5> Dados incorretos! </h5>";
+            }
+          ?>
+
+        
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fa fa-bars"></i>
@@ -51,14 +72,14 @@
     </nav>
 
     <!-- Page Header -->
-    <header class="masthead" style="background-image: url('img/backgroundpfc.png')">
+    <header class="masthead" style="background-image: url('img/logoNome2.png')">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
-            <div class="page-heading">
+            <div class="site-heading">
               <h1>PFC</h1>
-              <span class="subheading">O que é o PFC?</span>
+              <span class="subheading">Programa de Fomento a Capacitação</span>
             </div>
           </div>
         </div>
@@ -69,57 +90,28 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-8 col-md-10 mx-auto">
-          <h4>Qualquer membro efetivo da ecompjr, terá direito a participar desse programa que estimula a capacitação
-             do membro em eventos que serão pagos integralmente ou parcialmente pela empresa.</h4>
-          <p><li>Membros desligados da empresa perderão os  pontos acumulados, sendo destinado os pontos para a empresa.</li></p>
-          <p><li>Serão permitidas apenas participações em eventos que tragam algum retorno técnico ou administrativo para o membro.</li></p>
-          <p><li>O membro receberá um apoio proporcional a quantidade de pontos que tiver acumulado, valendo a pena ressaltar
-             que este apoio será feito em forma de reembolso, após apresentação do comprovante de pagamento,
-              que deverá ficar com a empresa para comprovar o destino do dinheiro.</li></p>
-          <p><li>Cada pessoa não poderá ter uma pontuação que exceda 250 pontos em um único projeto,
-             sendo assim, o excedente será destinado a empresa.</li></p>
-          <h4>O PFC é distribuido da seguinte forma:</h4>
-          <img class="displayed" src="img/div_pfc.PNG" alt="Destribuição do PFC">
-          <p>Dos 80%:</p>
-          <img src="img/80porcent.PNG" alt="">
-          <p>e, dos 20%:</p>
-          <img src="img/20porcent.PNG" alt="">
-          <div class="coments">** Caso o membro que realizou a prospecção esteja ligado a alguma atividade que de certa forma já seja responsável por isso (e.g. Assessor de vendas), este receberá apenas 5%, sendo os outros 5% destinados à empresa
+          <div class="post-preview">
+            <a href="pfc.html">
+              <h2 class="post-title">
+                Programa de Fomento a Capacitação
+              </h2>
+              <h3 class="post-subtitle">
+                O que é?
+              </h3>
+            </a>
           </div>
-          <p>Por exemplo: Um projeto de 1000 reais</p>
-          <ul>
-            <li>800 pontos para a empresa
-                <ul>
-                  <li>650 pontos para a empresa</li>
-                  <li>150 pontos ConDIR
-                    <ul>
-                      <li>18,75/membro</li>
-                    </ul>
-                  </li>
-                </ul>  
-            </li>
-            <li>200 pontos para projeto
-              <ul>
-                <li>Prospecção Ativa
-                  <ul>
-                    <li>20 pontos membro que encontrou</li>
-                    <li>180 pontos membros desenvolvedores
-                      <ul>
-                        <li>(180/quantidade de membros) pontos/membro</li>
-                      </ul>
-                    </li>
-                  </ul>
-                </li>
-                <li>Caso Contrario
-                  <ul>
-                    <li>(200/quantidade) pontos/membro</li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-          </ul>
-
-
+          <hr>
+          <div class="post-preview">
+            <a href="member.html">
+              <h2 class="post-title">
+                Membros e pontos de PFC
+              </h2>
+              <h3 class="post-subtitle">
+                Pontos de cada membro com suas respectivas fotos.                
+              </h3>
+            </a>
+          </div>
+          <hr>
         </div>
       </div>
     </div>
