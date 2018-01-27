@@ -39,7 +39,7 @@
             <form class="form-horizontal" action="routes/routes.php" method="POST">
               <input id="login" class="form-control login" type="text" name="login" placeholder="Usuario.." />
               <input id="senha" class="form-control login" type="password" name="senha" placeholder="Senha.."/>
-              <input type="submit" name="loginAttempt"/>
+              <input type="submit" name="loginAttempt" value="Entrar"/>
             </form>
           </div>
         </li>
